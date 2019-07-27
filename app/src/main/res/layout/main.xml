@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:CircleView="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/iv_main_head"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/main_head"
+        />
+
+    <RelativeLayout
+        android:id="@+id/rl_head"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/iv_main_head"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Huyan"
+            android:layout_centerHorizontal="true"
+            android:textColor="@color/themeColor"
+            android:layout_marginTop="6dp"
+            android:textSize="21sp"
+            />
+        <ImageView
+            android:id="@+id/iv_more"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginRight="6dp"
+            android:src="@drawable/more"
+            android:layout_alignParentRight="true"
+            />
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/rl_body"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rl_head"
+        android:layout_alignParentStart="true"
+
+        android:layout_marginTop="61dp">
+
+        <TextView
+            android:id="@+id/tv_blue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="蓝光过滤"
+            android:textColor="@color/themeColor" />
+
+        <LinearLayout
+            android:id="@+id/ll_b"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_blue"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="100dp"
+            android:orientation="horizontal">
+
+            <SeekBar
+                android:id="@+id/sb_b"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/rl_change_color"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ll_b"
+            android:layout_marginTop="20dp">
+
+            <TextView
+                android:id="@+id/tv_change"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="颜色调节"
+                android:textColor="@color/themeColor" />
+
+            <TextView
+                android:id="@+id/tv_change_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_change"
+                android:layout_marginTop="10dp"
+                android:text="模式" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_below="@+id/tv_change_title"
+                android:layout_marginTop="30dp"
+                android:background="@color/lightGreen"
+                android:gravity="center_vertical|center_horizontal">
+
+                <com.huyan.view.CircleView
+                    android:id="@+id/cv_deefault"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    CircleView:color="@color/circle_default" />
+
+                <com.huyan.view.CircleView
+                    android:id="@+id/cv_yellow"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_marginLeft="30dp"
+                    android:layout_toRightOf="@id/cv_deefault"
+                    CircleView:color="@color/circle_yello" />
+
+                <com.huyan.view.CircleView
+                    android:id="@+id/cv_green"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_marginLeft="30dp"
+                    CircleView:color="@color/circle_green" />
+
+                <com.huyan.view.CircleView
+                    android:id="@+id/cv_red"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_marginLeft="30dp"
+                    CircleView:color="@color/circle_red" />
+
+                <com.huyan.view.CircleView
+                    android:id="@+id/cv_black"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_marginLeft="30dp"
+                    CircleView:color="@color/circle_black" />
+
+            </LinearLayout>
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="6dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="10dp"
+        >
+        <TextView
+            android:id="@+id/tv_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="使用时长"
+            android:textSize="20dp"
+            />
+
+    </RelativeLayout>
+
+
+
+
+
+
+</RelativeLayout>

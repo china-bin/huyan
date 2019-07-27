@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.huyan">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/icon"
+        android:label="@string/app_name"
+        android:roundIcon="@drawable/icon"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".StartActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".MainActivity" ></activity>
+        <activity android:name=".MoreActivity" android:theme="@style/AnimActivityThem" ></activity>
+        <activity android:name=".more.AuthorActivity" android:theme="@style/AnimActivityThem" ></activity>
+        <activity android:name=".more.ColorBlindActivity" android:theme="@style/AnimActivityThem"></activity>
+        <activity android:name=".more.CommonSenseActivity" android:theme="@style/AnimActivityThem"></activity>
+        <activity android:name=".more.CommonSenseContentActivity" android:theme="@style/AnimActivityThem"></activity>
+    </application>
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>
+
+</manifest>
